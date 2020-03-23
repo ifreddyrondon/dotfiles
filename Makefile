@@ -73,6 +73,7 @@ macos-defaults:
 update: brew
 	brew update
 	brew upgrade
+	mas upgrade
 
 clean: brew
 	brew cleanup
