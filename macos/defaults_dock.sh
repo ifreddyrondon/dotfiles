@@ -40,7 +40,7 @@ defaults write com.Apple.Dock show-recents -bool false
 dockutil --no-restart --remove all
 dockutil --no-restart --add "/Applications/Google Chrome.app"
 dockutil --no-restart --add "/Applications/Spark.app"
-dockutil --no-restart --add "/Applications/Franz.app"
+dockutil --no-restart --add "/Applications/Whatsapp.app"
 dockutil --no-restart --add "/Applications/Slack.app"
 dockutil --no-restart --add "/Applications/iTerm.app"
 dockutil --no-restart --add "/System/Applications/System Preferences.app"
