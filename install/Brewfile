@@ -76,7 +76,6 @@ cask "vlc"
 cask "webstorm"
 cask "whatsapp"
 mas "Bear", id: 1091189122
-mas "Evernote", id: 406056744
 mas "Spark", id: 1176895641
 mas "Trello", id: 1278508951
 mas "Xcode", id: 497799835
