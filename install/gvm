@@ -1,2 +1,0 @@
-curl --location --silent --show-error "https://git.io/g-bin" > "$GOPATH/bin/gvm"
-chmod +x "$GOPATH/bin/gvm"

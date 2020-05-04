@@ -1,4 +1,4 @@
-alias g='lazygit' # https://github.com/jesseduffield/lazygit
+alias gg='lazygit' # https://github.com/jesseduffield/lazygit
 
 alias ga='git add'
 alias gaa='git add --all'
@@ -54,7 +54,7 @@ alias gfo='git fetch origin'
 
 alias gfg='git ls-files | grep'
 
-alias gg='git gui citool'
+alias gui='git gui citool'
 alias gga='git gui citool --amend'
 
 alias ggpur='ggu'
