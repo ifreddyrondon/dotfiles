@@ -12,7 +12,7 @@ prepend-path "/usr/local/sbin"
 prepend-path "$DOTFILES_DIR/bin"
 prepend-path "$HOME/bin"
 # furycli
-prepend-path "$HOME/Library/Python/3.8/bin"
+prepend-path "$HOME/Library/Python/3.9/bin"
 # GO
 prepend-path "$GOPATH/bin"
 

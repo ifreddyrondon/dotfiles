@@ -17,11 +17,9 @@ brew "readline"
 brew "sqlite"
 brew "glib"
 brew "python@3.8"
-brew "cmake"
 brew "suite-sparse"
+brew "cmake"
 brew "coreutils"
-brew "go"
-brew "dep"
 brew "dockutil"
 brew "libidn2"
 brew "ffmpeg"
@@ -29,6 +27,7 @@ brew "geoipupdate"
 brew "gh"
 brew "git"
 brew "git-lfs"
+brew "go"
 brew "gotop"
 brew "graphviz"
 brew "ncurses"
@@ -92,9 +91,3 @@ cask "vlc"
 cask "webstorm"
 cask "whatsapp"
 cask "wkhtmltopdf"
-mas "Bear", id: 1091189122
-mas "CleanMyMac X", id: 1339170533
-mas "ColorSlurp", id: 1287239339
-mas "Spark", id: 1176895641
-mas "Trello", id: 1278508951
-mas "Xcode", id: 497799835
