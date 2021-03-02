@@ -6,6 +6,7 @@ function j() {
         if [ -n "${JAVA_HOME+x}" ]; then
         removeFromPath $JAVA_HOME
         fi
+	unset JAVA_HOME
         export JAVA_HOME=$(/usr/libexec/java_home -v $ver)
         export PATH=$JAVA_HOME/bin:$PATH
 
