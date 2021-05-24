@@ -13,6 +13,8 @@ prepend-path "$DOTFILES_DIR/bin"
 prepend-path "$HOME/bin"
 # furycli
 prepend-path "$HOME/Library/Python/3.9/bin"
+# Nordic doctor
+prepend-path "$HOME/.nordic-doctor/bin:$PATH"
 # GO
 prepend-path "$GOPATH/bin"
 
