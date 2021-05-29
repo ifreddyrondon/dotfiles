@@ -45,7 +45,7 @@ brew "maven"
 brew "memcached"
 brew "mysql-client"
 brew "n"
-brew "neovim"
+brew "neovim", args: ["HEAD"]
 brew "numpy"
 brew "opencv"
 brew "pcre++"
