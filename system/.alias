@@ -33,6 +33,7 @@ alias tree2="tree -d -L 2"
 
 # Miscellaneous
 
+alias vim="nvim"
 alias hosts="sudo $EDITOR /etc/hosts"
 alias quit="exit"
 alias week="date +%V"
