@@ -10,7 +10,7 @@ macos: core-macos packages link
 
 linux: core-linux link
 
-core-macos: brew bash git n g
+core-macos: brew bash git version-manager
 
 core-linux:
 	apt-get update
@@ -46,18 +46,25 @@ bash: brew
 git: brew
 	@(brew list git) || brew install git
 
-n: brew
-	is-executable n && n lts
-
-g:
-	@is-executable g || sh install/g && g install latest
-
 brew-packages: brew
 	brew bundle --file=$(DOTFILES_DIR)/install/Brewfile
 	for EXT in $$(cat install/Codefile); do code --install-extension $$EXT; done
 
 node-packages: n
 	npm install -g $(shell cat install/npmfile)
+
+version-manager: asdf asdf-plugins
+
+asdf: brew
+	is-executable asdf || brew install asdf
+
+asdf-plugins: asdf-nodejs
+
+asdf-nodejs: brew asdf
+	asdf list nodejs || asdf plugin-add nodejs https://github.com/asdf-vm/asdf-nodejs.git
+	is-executable gpg || brew install gpg
+	is-executable gawk || brew install gawk
+	asdf install nodejs latest
 
 mackup: brew
 	is-executable mackup && mackup restore
