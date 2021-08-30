@@ -53,14 +53,12 @@ brew-packages: brew
 node-packages: n
 	npm install -g $(shell cat install/npmfile)
 
-version-manager: asdf asdf-plugins
+version-manager: n
 
-asdf: brew
-	is-executable asdf || brew install asdf
+n: brew
+	is-executable n || brew install asdf
 
-asdf-plugins: asdf-nodejs
 
-asdf-nodejs: brew asdf
 	asdf list nodejs || asdf plugin-add nodejs https://github.com/asdf-vm/asdf-nodejs.git
 	is-executable gpg || brew install gpg
 	is-executable gawk || brew install gawk
