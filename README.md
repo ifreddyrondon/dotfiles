@@ -2,15 +2,13 @@
 
 These are my dotfiles. Take anything you want, but at your own risk.
 
-It targets macOS systems, but it should work on \*nix as well (with `apt-get`).
+It targets macOS systems, linux is not supported right now.
 
 ## Package overview
 
 - [Homebrew](https://brew.sh) and [homebrew-cask](https://caskroom.github.io) (packages:
-- [Node.js + npm LTS](https://nodejs.org/en/download/) (packages: [npmfile](./install/npmfile))
-- Latest Git, Zsh, Go, Python 3, GNU coreutils, curl
+- Latest Git, Zsh, oh-my-zsh, Go, GNU coreutils
 - [Hammerspoon](https://www.hammerspoon.org)
-- [Mackup](https://github.com/lra/mackup) (sync application settings)
 
 ## Install
 
@@ -28,35 +26,17 @@ This will clone (using `git`), or download (using `curl` or `wget`), this repo t
 
     git clone https://github.com/ifreddyrondon/dotfiles.git ~/.dotfiles
 
-Use the [Makefile](./Makefile) to install everything [listed above](#package-overview), and symlink [runcom](./runcom):
+Use the [Makefile](./Makefile) to install everything [listed above](#package-overview)
 
     cd ~/.dotfiles
     make
 
 ## Post-install
 
-- `dotfiles defaults` (set [system defaults](./macos/))
+- `make defaults` (set [system defaults](./macos/))
 - Mackup
-  - Make sure all your config are `~/.config/mackup/`
-  - `dotfiles mackup`
+  - use the installation process for mackup https://github.com/ifreddyrondon/mackup.git
 
-## The `dotfiles` command
-
-    $ dotfiles help
-    Usage: dotfiles <command>
-
-    Commands:
-       clean            Clean up caches (brew, g, n)
-       defaults         Apply os system defaults
-       edit             Open dotfiles in IDE (code) and Git GUI (stree)
-       help             This help message
-       update           Update packages and pkg managers (OS, brew, n)
-
-## Customize/extend
-
-You can put your custom settings, such as Git credentials in the `system/.custom` file which will be sourced from `.zshrc` automatically. This file is in `.gitignore`.
-
-Alternatively, you can have an additional, personal dotfiles repo at `~/.extra`. The runcom `.zshrc` sources all `~/.extra/runcom/*.sh` files.
 
 ## Additional resources
 

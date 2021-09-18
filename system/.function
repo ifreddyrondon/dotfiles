@@ -1,9 +1,0 @@
-# Add to path
-function prepend-path() {
-  [ -d $1 ] && PATH="$1:$PATH"
-}
-
-# remove from path
-function removeFromPath() {
-  export PATH=$(echo $PATH | sed -E -e "s;:$1;;" -e "s;$1:?;;")
-}
