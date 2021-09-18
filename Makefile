@@ -77,12 +77,12 @@ hammerspoon: brew
 packages: brew-packages
 
 brew-packages: brew
-	brew bundle --file=$(CRR_DIR)/install/Brewfile
+	brew bundle --file=$(CRR_DIR)install/Brewfile
 
 defaults: $(OS)-defaults
 
 macos-defaults:
-	@for DEFAULTS_FILE in $(CRR_DIR)/macos/defaults*.sh; do	\
+	@for DEFAULTS_FILE in $(CRR_DIR)macos/defaults*.sh; do	\
 		echo "Applying $$DEFAULTS_FILE" && . $$DEFAULTS_FILE;		\
 	done;
 	@echo "Done. Some changes may require a logout/restart to take effect."
