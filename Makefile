@@ -46,22 +46,21 @@ oh-my-zsh:
 		curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh | sh; \
 	fi)
 
-version-manager: preparing-version-manager n
+version-manager: preparing-version-manager node
 
 preparing-version-manager:
 	@echo -- version manager: preparing for install version managers
 
-check-install-n: brew
-	@echo -- n: checking if it is installed
-	@(is-executable n && echo "-- n: installed") || (echo "-- n: installing..." && brew install n)
+check-install-node: brew
+	@echo -- node: checking if it is installed
+	@(is-executable node && echo "-- node: installed") || (echo "-- n: installing..." && brew install nvm)
 
-n: check-install-n
-	@(if [ -d /usr/local/n ]; then \
-		echo "-- n: folder /usr/local/n ready"; \
+node: check-install-node
+	@(if [ -d ~/.nvm ]; then \
+		echo "-- n: folder ~/.nvm ready"; \
 	else \
-		echo "-- n: creating folder /usr/local/n"; \
-		mkdir /usr/local/n; \
-		sudo chown -R $(whoami) /usr/local/n; \
+		echo "-- n: creating folder ~/.nvm"; \
+		mkdir ~/.nvm; \
 	fi)
 
 langs: go
